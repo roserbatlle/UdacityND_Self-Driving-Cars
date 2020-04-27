@@ -134,6 +134,8 @@ The recognized area is back down onto the road thanks to `cv2.fillPoly()`, `cv2.
 
 In the 12th code cell,  the process_image() function is implemented. It gathers together all the previous steps and it is used to apply the identified lane lines down to the road in a 50 sec video. The output can be seen [here](https://www.youtube.com/watch?v=hlNFsI8iinw&feature=youtu.be). 
 
+The second try for this vidio output, with the offset and curvature values displayed in the image can be checked [here](https://youtu.be/nFxfSZ89czc).
+
 ---
 
 ### Discussion
