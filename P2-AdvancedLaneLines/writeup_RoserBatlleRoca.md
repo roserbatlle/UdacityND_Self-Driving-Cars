@@ -132,9 +132,8 @@ The recognized area is back down onto the road thanks to `cv2.fillPoly()`, `cv2.
 
 #### 1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (wobbly lines are ok but no catastrophic failures that would cause the car to drive off the road!).
 
-In the 12th code cell,  the process_image() function is implemented. It gathers together all the previous steps and it is used to apply the identified lane lines down to the road in a 50 sec video. The output can be seen [here](https://www.youtube.com/watch?v=hlNFsI8iinw&feature=youtu.be). 
+In the 12th code cell,  the process_image() function is implemented. It gathers together all the previous steps and it is used to apply the identified lane lines down to the road in a 50 sec video. The output can be seen [here](https://youtu.be/GG94IfMVJvs). 
 
-The second try for this vidio output, with the offset and curvature values displayed in the image can be checked [here](https://youtu.be/nFxfSZ89czc).
 
 ---
 
