@@ -35,7 +35,7 @@ The goals / steps of this project are the following:
 
 #### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
 
-You're reading it! and here is a link to my [project code](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
+You're reading it! and here is a link to my [project code](https://github.com/roserbatlle/udacity-self-driving-cars/blob/master/P3-TrafficSignClassifier/Traffic_Sign_Classifier.ipynb)
 
 ### Data Set Summary & Exploration
 
@@ -47,7 +47,7 @@ I used python and numpy methods to calculate the stadistics of the provided traf
 
 * The size of the validation set is 4410.
 
-* The size of the test set is 34799.
+* The size of the test set is 12630.
 
 * The shape of a traffic sign image is 32x32x3.
 
@@ -101,129 +101,131 @@ Eventually, the characteristics of the trained model are:
 
 To begin, I iterated the number of epochs value in order to see how much the network needed to reach the desired value. Concluding that actually not many epochs were needed in order to achieve the desired accuracy value, I decided to set the training to 10 epochs. However, modifications afterwards the results of the network were not certainly good, which led me to increase the number of epochs to 30 and the batch size from 128 to 250. 
 Then, I decided to play around different values for the introduced dropout layers and how many filters would be applied in the middle layers. Further, I decided to modify the values of the fully connected layers. 
-Finally, I have obtained 0.937 accuracy for the validation set, 0.999 for the training set and 0.987 for the test set. 
+Finally, I have obtained 0.930 accuracy for the validation set, 0.999 for the training set and 0.916 for the test set. 
 
 Results per epoch: 
 ```
+
 EPOCH 1 ...
-Validation >> Accuracy = 0.780 Loss = 0.788
-Train >> Accuracy = 0.858 Loss = 0.509
+Validation >> Accuracy = 0.794 Loss = 0.730
+Train >> Accuracy = 0.870 Loss = 0.466
 
 EPOCH 2 ...
-Validation >> Accuracy = 0.854 Loss = 0.526
-Train >> Accuracy = 0.939 Loss = 0.206
+Validation >> Accuracy = 0.856 Loss = 0.512
+Train >> Accuracy = 0.946 Loss = 0.198
 
 EPOCH 3 ...
-Validation >> Accuracy = 0.888 Loss = 0.432
-Train >> Accuracy = 0.966 Loss = 0.126
+Validation >> Accuracy = 0.874 Loss = 0.462
+Train >> Accuracy = 0.970 Loss = 0.116
 
 EPOCH 4 ...
-Validation >> Accuracy = 0.905 Loss = 0.392
-Train >> Accuracy = 0.981 Loss = 0.078
+Validation >> Accuracy = 0.898 Loss = 0.418
+Train >> Accuracy = 0.980 Loss = 0.075
 
 EPOCH 5 ...
-Validation >> Accuracy = 0.902 Loss = 0.398
-Train >> Accuracy = 0.982 Loss = 0.065
+Validation >> Accuracy = 0.895 Loss = 0.418
+Train >> Accuracy = 0.987 Loss = 0.055
 
 EPOCH 6 ...
-Validation >> Accuracy = 0.905 Loss = 0.392
-Train >> Accuracy = 0.989 Loss = 0.044
+Validation >> Accuracy = 0.899 Loss = 0.453
+Train >> Accuracy = 0.991 Loss = 0.039
 
 EPOCH 7 ...
-Validation >> Accuracy = 0.902 Loss = 0.404
-Train >> Accuracy = 0.991 Loss = 0.034
+Validation >> Accuracy = 0.904 Loss = 0.411
+Train >> Accuracy = 0.990 Loss = 0.034
 
 EPOCH 8 ...
-Validation >> Accuracy = 0.928 Loss = 0.360
-Train >> Accuracy = 0.995 Loss = 0.020
+Validation >> Accuracy = 0.918 Loss = 0.411
+Train >> Accuracy = 0.991 Loss = 0.030
 
 EPOCH 9 ...
-Validation >> Accuracy = 0.924 Loss = 0.304
-Train >> Accuracy = 0.995 Loss = 0.019
+Validation >> Accuracy = 0.908 Loss = 0.481
+Train >> Accuracy = 0.994 Loss = 0.021
 
 EPOCH 10 ...
-Validation >> Accuracy = 0.924 Loss = 0.330
-Train >> Accuracy = 0.993 Loss = 0.025
-
-EPOCH 11 ...
-Validation >> Accuracy = 0.913 Loss = 0.400
+Validation >> Accuracy = 0.917 Loss = 0.398
 Train >> Accuracy = 0.995 Loss = 0.018
 
+EPOCH 11 ...
+Validation >> Accuracy = 0.922 Loss = 0.385
+Train >> Accuracy = 0.995 Loss = 0.019
+
 EPOCH 12 ...
-Validation >> Accuracy = 0.926 Loss = 0.406
-Train >> Accuracy = 0.997 Loss = 0.012
+Validation >> Accuracy = 0.922 Loss = 0.414
+Train >> Accuracy = 0.995 Loss = 0.019
 
 EPOCH 13 ...
-Validation >> Accuracy = 0.923 Loss = 0.402
-Train >> Accuracy = 0.997 Loss = 0.013
+Validation >> Accuracy = 0.923 Loss = 0.450
+Train >> Accuracy = 0.997 Loss = 0.012
 
 EPOCH 14 ...
-Validation >> Accuracy = 0.919 Loss = 0.386
-Train >> Accuracy = 0.998 Loss = 0.010
+Validation >> Accuracy = 0.918 Loss = 0.483
+Train >> Accuracy = 0.995 Loss = 0.015
 
 EPOCH 15 ...
-Validation >> Accuracy = 0.935 Loss = 0.315
-Train >> Accuracy = 0.997 Loss = 0.014
+Validation >> Accuracy = 0.902 Loss = 0.497
+Train >> Accuracy = 0.991 Loss = 0.028
 
 EPOCH 16 ...
-Validation >> Accuracy = 0.930 Loss = 0.331
-Train >> Accuracy = 0.998 Loss = 0.010
+Validation >> Accuracy = 0.916 Loss = 0.463
+Train >> Accuracy = 0.994 Loss = 0.020
 
 EPOCH 17 ...
-Validation >> Accuracy = 0.919 Loss = 0.473
-Train >> Accuracy = 0.996 Loss = 0.015
+Validation >> Accuracy = 0.924 Loss = 0.425
+Train >> Accuracy = 0.998 Loss = 0.009
 
 EPOCH 18 ...
-Validation >> Accuracy = 0.932 Loss = 0.365
-Train >> Accuracy = 0.998 Loss = 0.009
+Validation >> Accuracy = 0.911 Loss = 0.515
+Train >> Accuracy = 0.997 Loss = 0.011
 
 EPOCH 19 ...
-Validation >> Accuracy = 0.931 Loss = 0.418
-Train >> Accuracy = 0.998 Loss = 0.009
+Validation >> Accuracy = 0.931 Loss = 0.389
+Train >> Accuracy = 0.998 Loss = 0.005
 
 EPOCH 20 ...
-Validation >> Accuracy = 0.927 Loss = 0.361
-Train >> Accuracy = 0.996 Loss = 0.014
+Validation >> Accuracy = 0.927 Loss = 0.460
+Train >> Accuracy = 0.998 Loss = 0.006
 
 EPOCH 21 ...
-Validation >> Accuracy = 0.922 Loss = 0.465
+Validation >> Accuracy = 0.907 Loss = 0.566
 Train >> Accuracy = 0.997 Loss = 0.010
 
 EPOCH 22 ...
-Validation >> Accuracy = 0.925 Loss = 0.502
-Train >> Accuracy = 0.999 Loss = 0.005
+Validation >> Accuracy = 0.926 Loss = 0.472
+Train >> Accuracy = 0.998 Loss = 0.008
 
 EPOCH 23 ...
-Validation >> Accuracy = 0.934 Loss = 0.351
-Train >> Accuracy = 0.999 Loss = 0.005
+Validation >> Accuracy = 0.918 Loss = 0.456
+Train >> Accuracy = 0.998 Loss = 0.007
 
 EPOCH 24 ...
-Validation >> Accuracy = 0.931 Loss = 0.402
-Train >> Accuracy = 0.997 Loss = 0.009
+Validation >> Accuracy = 0.919 Loss = 0.494
+Train >> Accuracy = 0.998 Loss = 0.007
 
 EPOCH 25 ...
-Validation >> Accuracy = 0.932 Loss = 0.396
+Validation >> Accuracy = 0.926 Loss = 0.459
 Train >> Accuracy = 0.998 Loss = 0.007
 
 EPOCH 26 ...
-Validation >> Accuracy = 0.934 Loss = 0.369
-Train >> Accuracy = 0.998 Loss = 0.007
+Validation >> Accuracy = 0.914 Loss = 0.557
+Train >> Accuracy = 0.993 Loss = 0.021
 
 EPOCH 27 ...
-Validation >> Accuracy = 0.932 Loss = 0.394
-Train >> Accuracy = 0.998 Loss = 0.005
+Validation >> Accuracy = 0.932 Loss = 0.412
+Train >> Accuracy = 0.999 Loss = 0.005
 
 EPOCH 28 ...
-Validation >> Accuracy = 0.936 Loss = 0.332
-Train >> Accuracy = 0.997 Loss = 0.013
+Validation >> Accuracy = 0.910 Loss = 0.583
+Train >> Accuracy = 0.996 Loss = 0.012
 
 EPOCH 29 ...
-Validation >> Accuracy = 0.928 Loss = 0.339
-Train >> Accuracy = 0.999 Loss = 0.009
+Validation >> Accuracy = 0.937 Loss = 0.444
+Train >> Accuracy = 0.999 Loss = 0.004
 
 EPOCH 30 ...
-Validation >> Accuracy = 0.937 Loss = 0.360
-Train >> Accuracy = 0.999 Loss = 0.003
+Validation >> Accuracy = 0.930 Loss = 0.469
+Train >> Accuracy = 0.999 Loss = 0.004
+
 ```
 
 ### Test a Model on New Images
